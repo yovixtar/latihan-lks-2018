@@ -1,0 +1,594 @@
+body{margin:0;background-color: #fff;}
+	h1{font-size: 30px;line-height: 0.3}
+	header{position: relative;z-index: 1;height: 60px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
+	.table {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	    width: 100%;
+	    border: 1px solid #ddd;
+	    font-family: comic sans ms
+	}
+	.th, .td {
+	    text-align: left;
+	    padding: 8px;
+	}
+	.th {background-color: #008ae6; color: #fff}
+	.tr:nth-child(even){background-color: #f2f2f2}
+	h3{font-family: comic sans ms}
+	.mylink {color:#f00;text-decoration: none;}
+	.mylink:hover {color:#008ae6;text-decoration: none;}
+	.brand{margin:0;font-weight: normal;line-height: 1;display: inline-block;font-family: 'Oswald',sans-serif;font-style: bold;color:#fff;}
+	.navbar {
+	    overflow: hidden;
+	    background-color: #66ff66;
+	    font-family: Arial, Helvetica, sans-serif;
+	    border-bottom: 5px solid #4CAF50;
+	}
+	
+	.navbar-mobile {
+		display:none;
+	    overflow: hidden;
+	    padding: 8px 10px;
+	    background-color: #66ff66;
+	    font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.navbar a {
+	    float: left;
+	    font-size: 16px;
+	    color: white;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+
+	.dropdown {
+	    float: left;
+	    overflow: hidden;margin-top: 10px;
+	}
+
+	.dropdown .dropbtn {
+	    font-size: 16px;    
+	    border: none;
+	    outline: none;
+	    color: white;
+	    padding: 14px 16px;
+	    background-color: inherit;
+	    font-family: inherit;
+	    margin: 0;
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	.dropdown-content a {
+	    float: none;
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	    background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+	
+	.akun-btn{float: right;margin-top: 10px;margin-right: 10px;}
+	
+	.btn-group .group-next {
+	    color: white; 
+	    padding: 10px 24px; 
+	    cursor: pointer; 
+	}
+
+	.btn-group .group-next:not(:last-child) {
+	    border-right: none; 
+	}
+	
+	.btn-group .btn-cari {
+	    color: white; 
+	    padding: 10px 24px;
+	    cursor: pointer; 
+	}
+
+	.btn-group .btn-cari:not(:last-child) {
+	    border-right: none; 
+	}
+
+	.btn-group:after {
+	    content: "";
+	    clear: both;
+	    display: table;
+	}
+
+	.search-div{margin-top: 10px;
+	}
+	
+	.searchbar {
+		background:white;width: 30vw;
+		padding: 9px;
+		margin-top: 1px;
+		font-size: 17px;
+		border: none;
+	}
+	
+	.bg-red{background-color: #66ff66;border-bottom: 5px solid #f71150;border-top:none;border-left:none;border-right: none}
+	.bg-red:hover{background-color: #f71150;border-bottom: 5px solid #66ff66;border-top:none;border-left:none;border-right: none}
+	.bg-blue{background-color: #0099ff;border-bottom: 5px solid #007acc;border-top:none;border-left:none;border-right: none}
+	.bg-blue:hover{background-color: #007acc;border-bottom: 5px solid #0099ff;border-top:none;border-left:none;border-right: none}
+	.bg-yellow{background-color: #ffeb3b;border-bottom: 5px solid #e6b800;border-top:none;border-left:none;border-right: none}
+	.bg-yellow:hover{background-color: #e6b800;border-bottom: 5px solid #ffeb3b;border-top:none;border-left:none;border-right: none}
+	.bg-green{background-color: #4CAF50;border-bottom: 5px solid #3e8e41;border-top:none;border-left:none;border-right: none}
+	.bg-green:hover{background-color: #3e8e41;border-bottom: 5px solid #4CAF50;border-top:none;border-left:none;border-right: none}
+	.bg-orange{background-color: #ff8000}
+	.bg-orange:hover{background-color: #cc6600}
+	
+	.sidenavmenu {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #fff;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+	}
+
+	.sidenavmenu .menu-sidenav {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #000;
+	    display: block;
+	    transition: 0.3s;
+	}
+
+	.sidenavmenu .menu-sidenav:hover {
+	    color: #888;
+	}
+	
+	.show {display:block;}
+
+	.sidenavmenu .closebtn {
+	    top: 0;
+	    right: 25px;
+	    font-size: 50px;
+	    color: #000;
+	    margin-left: 50px;
+	}
+	.sidenavmenu .closebtn:hover {
+	    background: #f00;color:#fff;
+	}
+	.btn-menu{color:#fff;border:1px solid #fff;border-radius: 5px;padding:3px 9px;margin-right:10px;}
+
+
+
+	/*Iklan*/
+	.iklan-area{
+		width: 100%;
+		padding: 20px;
+		height: 300px;
+		text-align:center;
+	}
+	.iklan-1{
+		width: 50%;
+		height:100%;
+		background-color: #0099ff;
+		display: inline-flex;
+		padding-top: 20px;
+		color:#fff;
+		font-family: comic sans ms;
+	}
+	.iklan-2{
+		width: 22%;
+		height:100%;
+		background-color: #0099ff;margin-left: 20px;
+		display: inline-flex;
+		padding-top: 20px;
+		color:#fff;
+		font-family: comic sans ms;
+	}
+	.iklan-3{
+		width: 22%;
+		height:100%;
+		background-color: #0099ff;margin-right: 20px;
+		display: inline-flex;float:right;
+		padding-top: 20px;
+		color:#fff;
+		font-family: comic sans ms;
+	}
+	
+	/*accordion*/
+	.div-info{
+		float:right;
+		width: 20%;
+	}
+	.accordion {
+	    background-color: #66ff66;
+	    color: #000;
+	    cursor: pointer;
+	    padding: 18px;
+	    width: 100%;
+	    border: none;
+	    text-align: left;
+	    outline: none;
+	    font-size: 15px;
+	    transition: 0.4s;
+	}
+
+	.active2, .accordion:hover {
+	    background-color: #4CAF50;
+	    color: #fff
+	}
+
+	.panel {
+	    padding: 0 18px;
+	    background-color: white;
+	    max-height: 0;
+	    overflow: hidden;
+	    transition: max-height 0.2s ease-out;
+	    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	
+	.slideshow-area{display: none}
+	* {box-sizing: border-box;}
+	.mySlides {display: none;}
+	.img-slide {vertical-align: middle;}
+
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	}
+
+	.dot {
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active {
+	  background-color: #66ff66;
+	}
+
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+	
+	
+	
+	.cat-area{
+		width: 90%;
+		height:auto;
+		margin:20px auto;padding-top: 10px;padding-bottom: 10px;
+	}
+	.text-cat-area{
+		width: 100%;
+		height:auto;
+		margin:10px auto;text-align: center;
+		font-family: comic sans ms;
+		color:#fff;
+	}
+	.produk-area-cat{
+		width: 90%;
+		margin:5px auto;
+		align-content:  center;
+	}
+	.produk-area{
+		width: 100%;
+		margin:5px auto;
+		align-content:  center;
+	}
+	
+	.kotakproduk{
+		width: 23%;
+		height: auto;
+		background-color: #fff;
+		display: inline-flex;
+		margin:5px 5px;
+		box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		
+	}
+	
+	.container-kp {
+	  position: relative;
+	  width: 100%;
+	}
+
+	.image-kp {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+
+	.overlay-kp {
+	  position: absolute;
+	  bottom: 100%;
+	  left: 0;
+	  right: 0;
+	  background: transparent;
+	  overflow: hidden;
+	  width: 100%;
+	  height:0;
+	  transition: .5s ease;
+	}
+
+	.container-kp:hover .overlay-kp {
+	  bottom: 0;
+	  height: 100%;
+	}
+
+	.text-kp {
+	width:100%;
+	  color: white;
+	  font-size: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  text-align: left;
+	  float: left
+	}
+
+	.btn-kp {
+	width:100%;
+	    position: absolute;
+	    background-color: #555;
+	    color: white;
+	    font-size: 2vw;
+	    padding: 1vw 1vw;
+	    border: none;
+	    cursor: pointer;
+	    text-align: center;
+	    
+	}
+
+	.btn-kp:hover {
+	    background-color: #66ff66;
+	}
+
+	.ket-kotak-produk{
+	font-family: comic sans ms;
+	font-size:1.5vw;padding: 1vw;
+	}
+	
+	.tabfooter {
+	    overflow: hidden;
+	    border: 1px solid #ccc;
+	    background-color: #66ff66;
+	}
+
+	.tabfooter button {
+	    background-color: inherit;
+	    float: left;
+	    border: none;
+	    outline: none;
+	    cursor: pointer;
+	    padding: 14px 16px;
+	    transition: 0.3s;
+	    font-size: 17px;
+	    color:#fff;
+	}
+
+	.tabfooter button:hover {
+	    background-color: #4CAF50;
+	}
+
+	.tabfooter button.active {
+	    background-color: #4CAF50;
+	}
+
+	.tabfootercontent {
+	    display: none;
+	    padding: 6px 12px;
+	    border: 1px solid #ccc;
+	    border-top: none;
+	}
+	
+	/* Modal */
+	.modal {
+	    display: none; 
+	    position: fixed; 
+	    z-index: 1; 
+	    left: 0;
+	    top: 0;
+	    width: 100%; 
+	    height: 100%; 
+	    overflow: auto; 
+	    background-color: rgb(0,0,0); 
+	    background-color: rgba(0,0,0,0.4); 
+	    -webkit-animation-name: fadeIn; 
+	    -webkit-animation-duration: 0.4s;
+	    animation-name: fadeIn;
+	    animation-duration: 0.4s
+	}
+
+	.modal-content {
+	    position: fixed;
+	    bottom: 0;
+	    background-color: #fefefe;
+	    width: 100%;
+	    -webkit-animation-name: slideIn;
+	    -webkit-animation-duration: 0.4s;
+	    animation-name: slideIn;
+	    animation-duration: 0.4s
+	}
+
+	.close {
+	    color: white;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: #000;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	.modal-header {
+	    padding: 2px 16px;
+	    background-color: #5cb85c;
+	    color: white;
+	}
+
+	.modal-body {padding: 2px 16px;}
+
+	.modal-footer {
+	    padding: 2px 16px;
+	    background-color: #5cb85c;
+	    color: white;
+	}
+
+	/* Add Animation */
+	@-webkit-keyframes slideIn {
+	    from {bottom: -300px; opacity: 0} 
+	    to {bottom: 0; opacity: 1}
+	}
+
+	@keyframes slideIn {
+	    from {bottom: -300px; opacity: 0}
+	    to {bottom: 0; opacity: 1}
+	}
+
+	@-webkit-keyframes fadeIn {
+	    from {opacity: 0} 
+	    to {opacity: 1}
+	}
+
+	@keyframes fadeIn {
+	    from {opacity: 0} 
+	    to {opacity: 1}
+	}
+	/* End Modal */
+
+
+	/*halaman Detail Produk*/
+	.detail_produk_area{
+		width: 90%;
+		height: 100%;
+		padding: 10px;
+		margin:10px auto;
+	}
+	.img-detail{
+		width: 350px;
+	}
+	.img-zoom-container {
+	  position: relative;
+	}
+	.img-zoom-lens {
+	  position: absolute;
+	  border: 1px solid #d4d4d4;
+	  width: 80px;
+	  height: 80px;display: inline-block;
+	}
+	.img-zoom-result {
+	  border: 1px solid #d4d4d4;
+	  width: 350px;
+	  height: 350px;display: inline-block;
+	}
+	.tb-detail-gambar{margin:1px auto;}
+	
+	.tb-detail-pk {
+	    border-collapse: collapse;
+	    width: 60%;
+	    margin:auto;
+	    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	    background-color: #fff;
+	}
+
+	.td-detail-pk {
+	    text-align: left;
+	    padding: 8px;
+	    font-family: comic sans ms;
+	    font-size: 20px;
+	}
+
+	.tr-detail-pk:nth-child(even){background-color: #f2f2f2}
+	
+	.btn-beli{
+		width: 100%;
+		background-color: #0099ff;
+		padding: 10px;
+		font-size: 25px;
+		border:none;
+		font-family: comic sans ms;
+		color:#fff;
+	}
+	
+	.mobile-img{display: none}
+
+	@media only screen and (max-width: 300px) {
+	  .text-slide {font-size: 11px}
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenavmenu {padding-top: 15px;}
+	  .sidenavmenu a {font-size: 18px;}
+	}
+	@media screen and (max-width: 545px){
+		.kotakproduk{width: 41%}
+		.ket-kotak-produk{font-size: 4vw}
+		.btn-kp{font-size: 5vw}
+	}
+	@media screen and (max-width: 680px) and (min-width: 545px){
+		.kotakproduk{width: 45%}
+		.ket-kotak-produk{font-size: 3vw}
+		.btn-kp{font-size: 5vw}
+	}
+	@media screen and (max-width: 760px) {
+		.perbesar-gambar{display: none;}
+		.dekstop-img{display: none;}
+		.mobile-img{display: block;}
+		.img-detail{width:80vw;}
+		.tb-detail-pk{width: 100%}
+		.img-zoom-lens{display: none}
+	}
+	@media only screen and (max-width: 870px) {
+    .navbar {
+        display: none
+    }
+    .navbar-mobile{display: block;}
+    .iklan-area{
+    	display: none;
+    }
+	.slideshow-area{display: block;}
+	} 
+	@media screen and (max-width: 1145px) and (min-width: 680px) {
+		.kotakproduk{width: 45%}
+		.ket-kotak-produk{font-size: 2vw}
+		.btn-kp{font-size: 3vw}
+	}
